@@ -1,0 +1,6 @@
+<div class="wrapper">
+    <div class="book" (click)="openBook(book)" *ngFor="let book of books">
+      <img class="book__img" src="{{book.image}}">
+      <p class="book__name">{{book.name}}</p>
+    </div>
+  </div>
