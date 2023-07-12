@@ -10,15 +10,17 @@ import ru from '@angular/common/locales/ru';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { IconsProviderModule } from './icons-provider.module';
 import { NzLayoutModule } from 'ng-zorro-antd/layout';
 import { NzMenuModule } from 'ng-zorro-antd/menu';
+import { TableComponent } from './table/table.component';
+import { NgZorroAntdModule } from './ng-zorro-antd.module';
 
 registerLocaleData(ru);
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TableComponent
   ],
   imports: [
     BrowserModule,
@@ -26,9 +28,9 @@ registerLocaleData(ru);
     FormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    IconsProviderModule,
     NzLayoutModule,
-    NzMenuModule
+    NzMenuModule,
+    NgZorroAntdModule
   ],
   providers: [
     { provide: NZ_I18N, useValue: ru_RU }
